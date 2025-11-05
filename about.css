@@ -1,0 +1,225 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+
+body {
+  background: url('.//image/Food\ shopping\ ilocos\ 1.JPG') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+
+header {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.namelogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+}
+
+.namelogo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 0.5px;
+}
+
+
+.navbar .nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 40px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  max-width: 1000px;
+  width: 90%;
+  gap: 40px;
+  transition: transform 0.3s ease;
+}
+
+.about-container:hover {
+  transform: scale(1.02);
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffcc00;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+}
+
+.about-text textarea {
+  width: 100%;
+  height: 250px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.5;
+  outline: none;
+  transition: 0.3s;
+}
+
+.about-text textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.about-text textarea::placeholder {
+  color: #ccc;
+}
+
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #ffcc00;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  border-top: 2px solid #ffcc00;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+  }
+
+  .about-text textarea {
+    height: 200px;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+  
+

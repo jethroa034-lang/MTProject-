@@ -1,0 +1,201 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  background: url('./image/damili.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+
+header {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.namelogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+}
+
+.namelogo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 0.5px;
+}
+
+
+.navbar .nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 40px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffcc00;
+}
+
+
+.product-hero {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding-top: 100px;
+}
+
+.hero-text h1 {
+  font-size: 58px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  color: #f0f0f0;
+  max-width: 700px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+
+.product-section {
+  padding: 100px 60px 60px;
+  text-align: center;
+}
+
+.product-section h2 {
+  font-size: 40px;
+  color: #ffcc00;
+  margin-bottom: 40px;
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.product-info p {
+  color: #f2f2f2;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  border-top: 2px solid #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .nav-menu {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .product-hero h1 {
+    font-size: 42px;
+  }
+
+  .product-section {
+    padding: 80px 20px;
+  }
+}
